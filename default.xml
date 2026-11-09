@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote name="mygithub" fetch="https://github.com/yellowduck999/" />
+  <remote name="aosp-mirror" fetch="https://github.com/yellowduck999/" />
   <remote name="aosp" fetch=".." review="https://android-review.googlesource.com/" />
   <default revision="main-kernel-build-2023" remote="aosp" sync-j="4" />
 
@@ -13,7 +13,7 @@
     <linkfile src="config.sh" dest="build/config.sh" />
   </project>
   
-  <project path="common" name="GKI-kernel-common" remote="mygithub" revision="android14-6.1-2025-12" upstream="android14-6.1-2025-12" dest-branch="android14-6.1-2025-12" />
+  <project path="common" name="kernel_common" remote="aosp-mirror" revision="android14-6.1-2025-12" upstream="android14-6.1-2025-12" dest-branch="android14-6.1-2025-12" />
   <!-- Uncomment for local testing only -->
   <!-- project path="kernel/tests" name="kernel/tests" revision="main-kernel" clone-depth="1" / -->
   <project path="kernel/configs" name="kernel/configs" revision="main" upstream="main" dest-branch="main" />
