@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
+  <remote name="mygithub" fetch="https://github.com/yellowduck999/" />
   <remote name="aosp" fetch=".." review="https://android-review.googlesource.com/" />
   <default revision="master-kernel-build-2022" remote="aosp" sync-j="4" />
 
@@ -19,7 +20,7 @@
     <linkfile src="abi" dest="build/abi" />
     <linkfile src="static_analysis" dest="build/static_analysis" />
   </project>
-  <project path="common" name="kernel/common" revision="android13-5.15-2025-12" upstream="android13-5.15-2025-12" dest-branch="android13-5.15-2025-12">
+  <project path="common" name="GKI-kernel-common" remote="mygithub" revision="android13-5.15-2025-12" upstream="android13-5.15-2025-12" dest-branch="android13-5.15-2025-12" />
     <linkfile src="." dest=".source_date_epoch_dir" />
   </project>
   <!-- Uncomment for local testing only -->
